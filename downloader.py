@@ -3,7 +3,6 @@ from CTkMessagebox import CTkMessagebox
 
 class FILEtd:
     def __init__(self, url, location):
-        self.status = None
         self.url = url
         self.location = location
 
@@ -13,7 +12,6 @@ class FILEtd:
 
         }
         with YoutubeDL(ydl_opts) as ydl:
-            self.status = 1
             ydl.download([self.url])
             CTkMessagebox(title="video downloaded", message="download successful")
 
